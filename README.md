@@ -24,24 +24,50 @@ The users of our datasets are Data Analysts. From dashboards using Power BI and 
 
 ## Solution architecture
 
-How are we going to get data flowing from source to serving? What components and services will we combine to implement the solution? How do we automate the entire running of the solution?
+**Architecture:**
 
-- What data extraction patterns are you going to be using?
-- What data loading patterns are you going to be using?
-- What data transformation patterns are you going to be performing?
+1. **Source Database (PostgreSQL on AWS RDS):** Holds raw data.
+2. **Airbyte on EC2:** Extracts data from RDS.
+3. **DBT:** Transforms data.
+4. **Snowflake Data Warehouse:** Stores transformed data.
+5. **Databricks:** Consumes data for further processing.
+6. **Power BI:** Uses data for visualization.
 
-We recommend using a diagramming tool like [draw.io](https://draw.io/) to create your architecture diagram.
+**Patterns:**
 
-Here is a sample solution architecture diagram:
+- **Data Extraction:** Batch extraction with Airbyte.
+- **Data Loading:** Batch loading to Snowflake.
+- **Data Transformation:** ELT pattern.
 
-![images/sample-solution-architecture-diagram.png](images/sample-solution-architecture-diagram.png)
+Here is a solution architecture diagram:
+
+![img/solution-architecture-diagram.png](img/solution-architecture-diagram.png)
 
 ## Breakdown of tasks
 
-How is your project broken down? Who is doing what?
+We used the github project kanban to manage our project.
 
-We recommend using a free Task board such as [Trello](https://trello.com/). This makes it easy to assign and track tasks to each individual.
+**Tasks:**
 
-Example:
+1. **Data Extraction and Transformation:**
 
-![images/kanban-task-board.png](images/kanban-task-board.png)
+   - DE: Extract data using Airbyte.
+   - DE: Transform data using DBT.
+
+2. **Infrastructure Setup:**
+
+   - CA: Provision EC2, Snowflake, and Databricks.
+   - CA: Set up monitoring.
+
+3. **Data Loading and Quality:**
+
+   - DE: Load data into Snowflake.
+   - DA and DE: Ensure data quality.
+
+4. **Analytics and Visualization:**
+
+   - DA: Create Power BI reports.
+
+This simplified breakdown helps clarify who does what in the project and ensures clear responsibility assignments for each task.
+
+![img/kanban.png](img/kanban.png)
