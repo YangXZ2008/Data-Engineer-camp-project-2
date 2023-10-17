@@ -1,0 +1,14 @@
+project2:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: .ap-southeast-2
+      database: PROJECT2
+      warehouse: ETL
+      user: dbt
+      password: ddbt
+      role: DBT_RW
+      schema: RAW
+      threads: 1
+
