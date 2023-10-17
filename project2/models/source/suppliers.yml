@@ -1,0 +1,7 @@
+version: 2
+sources:
+  - name: suppliers
+    database: Northwind
+    schema: public
+    tables:
+      - name: suppliers

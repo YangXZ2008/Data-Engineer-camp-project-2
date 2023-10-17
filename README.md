@@ -30,8 +30,7 @@ The users of our datasets are Data Analysts. From dashboards using Power BI and 
 2. **Airbyte on EC2:** Extracts data from RDS.
 3. **DBT:** Transforms data.
 4. **Snowflake Data Warehouse:** Stores transformed data.
-5. **Databricks:** Consumes data for further processing.
-6. **Power BI:** Uses data for visualization.
+5. **Preset:** Uses data for visualization.
 
 **Patterns:**
 
@@ -41,7 +40,7 @@ The users of our datasets are Data Analysts. From dashboards using Power BI and 
 
 Here is a solution architecture diagram:
 
-![img/solution-architecture-diagram.png](img/solution-architecture-diagram.png)
+![img/project2-solution-architecture.png](img/project2-solution-architecture.png)
 
 ## Breakdown of tasks
 

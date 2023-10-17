@@ -1,0 +1,1 @@
+{{ dbt_date.get_date_dimension("1996-07-04", run_started_at.strftime("%Y-%m-%d"))}}
