@@ -1,8 +1,8 @@
 version: 2
 sources:
   - name: products
-    database: Northwind
-    schema: public
+    database: project2
+    schema: raw
     tables:
       - name: products
       - name: categories

@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fact_snapshot_products_monthly
+    columns:
+      - name: product_key
+        tests:
+          - not_null
+      
+      - name: month_end_date_key
+        tests:
+          - not_null
+      

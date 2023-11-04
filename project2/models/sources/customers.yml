@@ -1,7 +1,7 @@
 version: 2
 sources:
   - name: customers
-    database: Northwind
-    schema: public
+    database: project2
+    schema: raw
     tables:
       - name: customers

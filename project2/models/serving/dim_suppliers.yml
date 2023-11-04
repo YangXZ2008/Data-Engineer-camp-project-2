@@ -1,0 +1,13 @@
+source: 2
+
+models:
+  - name: dim_suppliers
+    columns:
+      - name: supplier_key
+        tests:
+          - not_null
+          - unique
+      
+      - name: supplier_address_key
+        tests:
+        - not_null
