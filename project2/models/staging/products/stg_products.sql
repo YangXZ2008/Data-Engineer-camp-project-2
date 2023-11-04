@@ -9,4 +9,4 @@ select
     units_on_order,
     reorder_level,
     discontinued
-from {{ sources('products', 'products') }}
+from {{ source('products', 'products') }}

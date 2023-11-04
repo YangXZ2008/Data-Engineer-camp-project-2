@@ -1,5 +1,6 @@
 select
-    order_id,
+    orders.order_id,
+    order_details.product_id,
     customer_id,
     order_date,
     required_date,
@@ -9,11 +10,11 @@ select
     ship_name,
     ship_address,
     ship_city,
-    ship_region
+    ship_region,
     ship_postal_code,
     ship_country,
     unit_price,
     quantity,
     discount
-from {{ sources('orders', 'orders') }} as orders
-inner join {{ sources('orders', 'order_details') }} as order_details on orders.order_id = order_details.order_id 
+from {{ source('orders', 'orders') }} as orders
+inner join {{ source('orders', 'order_details') }} as order_details on orders.order_id = order_details.order_id

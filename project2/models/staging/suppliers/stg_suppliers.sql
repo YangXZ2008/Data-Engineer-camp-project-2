@@ -1,7 +1,6 @@
 select
-    customer_id,
+    supplier_id,
     company_name,
-    contact_name,
     contact_title,
     address,
     city,
@@ -9,6 +8,7 @@ select
     postal_code,
     country,
     phone,
-    fax
+    fax,
+    homepage
 from
-    {{ source('customers', 'customers') }}
+    {{ source('suppliers', 'suppliers') }}

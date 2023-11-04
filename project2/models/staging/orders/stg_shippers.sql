@@ -3,4 +3,4 @@ select
     company_name,
     phone
 from
-    {{ sources('orders', 'shippers') }}
+    {{ source('orders', 'shippers') }}

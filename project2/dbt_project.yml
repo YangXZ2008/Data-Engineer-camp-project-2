@@ -46,6 +46,9 @@ models:
       customers:
         +materialized: table
         +schema: staging
+      suppliers:
+        +materialized: table
+        +schema: staging
     serving:
       +materialized: table
       +schema: serving

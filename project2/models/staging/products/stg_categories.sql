@@ -2,6 +2,7 @@ select
     category_id,
     category_name,
     description,
-    picture
+    picture,
+    modifieddate
 from
     {{ source('products', 'categories') }}

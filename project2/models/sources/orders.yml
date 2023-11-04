@@ -1,8 +1,8 @@
 version: 2
 sources:
   - name: orders
-    database: Northwind
-    schema: public
+    database: project2
+    schema: raw
     tables:
       - name: orders
       - name: order_details
